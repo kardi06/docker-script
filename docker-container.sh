@@ -24,3 +24,6 @@ docker container logs -f redis
 
 #! masuk ke dalam container
 docker container exec -i -t redis bin/bash
+
+#! port Forwarding
+docker container create --name contohnginx --publish 8080:80 nginx:latest
