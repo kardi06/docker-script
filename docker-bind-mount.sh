@@ -1,0 +1,2 @@
+#! mounting
+docker container create --name mongodata --mount “type=bind,source=/Users/kardi/mongo/mongo-data,destination=/data/db” --publish 27018:27017 --env MONGO_INITDB_ROOT_USERNAME=admin --env MONGO_INITDB_ROOT_PASSWORD=password  mongo:latest
