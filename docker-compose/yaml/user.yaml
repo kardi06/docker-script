@@ -1,0 +1,16 @@
+firstname: Bang Jay
+lastname: yadi
+hobbies:
+  - game
+  - read
+  - jalan-jalan
+  - maecem- maecem
+address:
+  city: Surabaya
+  province: Jawa Timur
+  country: Indonesia
+wallet:
+  - type: cash
+    amount: 300000
+  - type: debet
+    amount: 100000

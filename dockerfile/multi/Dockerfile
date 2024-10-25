@@ -6,5 +6,5 @@ RUN go build -o /app/main main.go
 
 FROM alphine:3.8
 WORKDIR /app
-COPY --FROM=builder /app/main ./
+COPY --from=builder /app/main ./
 CMD /app/main
