@@ -1,14 +1,13 @@
-version: '3.8'
 services:
-  nginx-example:
-    container_name: nginx-example
+  nginx-port1:
+    container_name: nginx-port1
     image: nginx:latest
     ports:
       - protocol: TCP
         target: 80
         published: 8080
-  nginx-example2:
-    container_name: nginx-example2
+  nginx-port2:
+    container_name: nginx-port2
     image: nginx:latest
     ports:
       - "8081:80"
