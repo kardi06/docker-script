@@ -1,0 +1,10 @@
+services:
+  mongodb-example:
+    container_name: mongodb-example
+    image: mongo:latest
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME= admin
+      - MONGO_INITDB_ROOT_PASSWORD= password
+      - MONGO_INITDB_DATABASE= admin
+    ports:
+      - "27017:27017"
