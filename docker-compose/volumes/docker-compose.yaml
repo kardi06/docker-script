@@ -1,0 +1,32 @@
+services:
+  mongodb-1:
+    container_name: mongodb-1
+    image: mongo:latest
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME= admin
+      - MONGO_INITDB_ROOT_PASSWORD= password
+      - MONGO_INITDB_DATABASE= admin
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data1:/data/db
+  mongodb-2:
+    container_name: mongodb-2
+    image: mongo:latest
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME= admin
+      - MONGO_INITDB_ROOT_PASSWORD= password
+      - MONGO_INITDB_DATABASE= admin
+    ports:
+      - "27018:27017"
+    volumes:
+      - type: volume
+        source: mongo-data2
+        target: /data/db
+        read_only: false
+
+volumes:
+  mongo-data1:
+    name: mongo-data1
+  mongo-data2:
+    name: mongo-data2
